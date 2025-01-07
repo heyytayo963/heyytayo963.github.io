@@ -7,30 +7,38 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
-        <img src="logo_universitas_pelita_bangsa.png" alt="Logo Universitas Pelita Bangsa" class="logo">
-        <h1>Universitas Pelita Bangsa</h1>
-    </header>
-    <div id="container" class="fade-in">
-        <p>Selamat datang! Silahkan klik tombol di bawah ini untuk melihat data diri.</p>
-        <button id="startButton">Mulai</button>
-        <div id="data-diri" class="card">
-            <img src="foto_profil.jpg" alt="Foto Profil" class="foto-profil">
-            <h2>Data Diri</h2>
-            <p><strong>Nama:</strong> John Doe</p>
-            <p><strong>Alamat:</strong> Jl. Mawar No. 123, Bandung</p>
-            <p><strong>Telepon:</strong> 081234567890</p>
-            <p><strong>Email:</strong> john.doe@example.com</p>
+    <div id="slide1" class="slide active">
+        <header class="header">
+            <img src="logo_universitas_pelita_bangsa.png" alt="Logo Universitas Pelita Bangsa" class="logo">
+            <h1>Universitas Pelita Bangsa</h1>
+        </header>
+        <div class="content">
+            <p>Selamat datang! Silahkan klik tombol di bawah ini untuk melihat data diri.</p>
+            <button id="nextButton">Mulai</button>
+        </div>
+    </div>
+
+    <div id="slide2" class="slide">
+        <div id="container">
+            <div id="data-diri" class="card">
+                <img src="foto_profil.jpg" alt="Foto Profil" class="foto-profil">
+                <h2>Data Diri</h2>
+                <p><strong>Nama:</strong> John Doe</p>
+                <p><strong>Alamat:</strong> Jl. Mawar No. 123, Bandung</p>
+                <p><strong>Telepon:</strong> 081234567890</p>
+                <p><strong>Email:</strong> john.doe@example.com</p>
+            </div>
         </div>
     </div>
 
     <script>
-        const startButton = document.getElementById('startButton');
-        const dataDiri = document.getElementById('data-diri');
+        const nextButton = document.getElementById('nextButton');
+        const slide1 = document.getElementById('slide1');
+        const slide2 = document.getElementById('slide2');
 
-        startButton.addEventListener('click', () => {
-            dataDiri.style.display = 'block';
-            startButton.style.display = 'none';
+        nextButton.addEventListener('click', () => {
+            slide1.classList.remove('active');
+            slide2.classList.add('active');
         });
     </script>
 </body>
