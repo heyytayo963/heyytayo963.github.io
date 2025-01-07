@@ -1,3 +1,4 @@
+/* Tampilan umum */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -11,6 +12,7 @@ body {
     overflow: hidden;
 }
 
+/* Slide container */
 .slide {
     display: none;
     width: 100%;
@@ -29,6 +31,7 @@ body {
     animation: fadeIn 1s forwards;
 }
 
+/* Header universitas */
 .header {
     margin-bottom: 20px;
 }
@@ -42,11 +45,13 @@ body {
     color: #fff;
 }
 
+/* Konten di slide 1 */
 .content p {
     font-size: 18px;
     margin-bottom: 20px;
 }
 
+/* Tombol interaksi */
 button {
     padding: 10px 20px;
     font-size: 16px;
@@ -63,6 +68,7 @@ button:hover {
     transform: scale(1.05);
 }
 
+/* Data diri */
 .card {
     background-color: rgba(10, 31, 68, 0.8);
     padding: 20px;
@@ -91,6 +97,7 @@ button:hover {
     margin: 0 auto 10px;
 }
 
+/* Animasi fade-in */
 @keyframes fadeIn {
     from {
         opacity: 0;
