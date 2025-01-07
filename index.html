@@ -3,71 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Diri Estetik</title>
+    <title>Data Diri</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Halaman Awal -->
-    <div id="welcome-screen" class="welcome-screen">
-        <div class="welcome-content">
-            <h1>Selamat Datang</h1>
-            <p>Tekan tombol di bawah untuk melihat data diri</p>
-            <button onclick="startApp()">Mulai</button>
-        </div>
-    </div>
-
-    <!-- Halaman Data Diri -->
-    <div id="main-content" class="main-content hidden">
-        <header class="header">
-            <div class="logo">
-                <img src="logo-universitas.png" alt="Logo Universitas">
-            </div>
-            <div class="university-name">
-                <h1>Universitas Masa Kini</h1>
-            </div>
-        </header>
-
-        <div class="container">
-            <div class="profile">
-                <img src="profile.jpg" alt="Foto Profil" class="profile-image">
-                <div class="profile-info">
-                    <h2>Nama Anda</h2>
-                    <p>Mahasiswa | Programmer | Pecinta Teknologi</p>
-                </div>
-            </div>
-            <div class="details">
-                <h2>Data Diri</h2>
-                <table>
-                    <tr>
-                        <th>Nama</th>
-                        <td>Nama Lengkap Anda</td>
-                    </tr>
-                    <tr>
-                        <th>TTL</th>
-                        <td>Tempat, Tanggal Lahir</td>
-                    </tr>
-                    <tr>
-                        <th>Email</th>
-                        <td>email@example.com</td>
-                    </tr>
-                    <tr>
-                        <th>Telepon</th>
-                        <td>+62 812 3456 7890</td>
-                    </tr>
-                    <tr>
-                        <th>Alamat</th>
-                        <td>Alamat Lengkap Anda</td>
-                    </tr>
-                </table>
-            </div>
+    <div id="container">
+        <button id="startButton">Mulai</button>
+        <div id="data-diri" class="card">
+            <h2>Data Diri</h2>
+            <p><strong>Nama:</strong> John Doe</p>
+            <p><strong>Alamat:</strong> Jl. Mawar No. 123, Bandung</p>
+            <p><strong>Telepon:</strong> 081234567890</p>
+            <p><strong>Email:</strong> john.doe@example.com</p>
         </div>
     </div>
 
     <script>
-        function startApp() {
-            document.getElementById("welcome-screen").classList.add("hidden");
-            document.getElementById("main-content").classList.remove("hidden");
-        }
+        const startButton = document.getElementById('startButton');
+        const dataDiri = document.getElementById('data-diri');
+
+        startButton.addEventListener('click', () => {
+            dataDiri.style.display = 'block';
+            startButton.style.display = 'none';
+        });
     </script>
 </body>
 </html>
