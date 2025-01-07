@@ -62,12 +62,18 @@ button:hover {
     padding: 20px;
 }
 
+/* Styling untuk foto profil kotak dan tengah */
 .foto-profil {
     width: 150px;
     height: 150px;
-    border-radius: 50%;
+    object-fit: cover;  /* Menjaga foto tetap proporsional di dalam kotak */
     margin-bottom: 20px;
+    border-radius: 5px;  /* Sudut kotak sedikit melengkung */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;  /* Agar foto rata tengah secara horizontal */
 }
+
 
 h2 {
     text-align: center;
