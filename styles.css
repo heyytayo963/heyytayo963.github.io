@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     height: 100vh;
     background: linear-gradient(135deg, #0a1f44, #183e73);
@@ -11,10 +11,30 @@ body {
     overflow: hidden;
 }
 
+.header {
+    text-align: center;
+    background-color: #102d5c;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.header .logo {
+    max-height: 60px;
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #fff;
+}
+
 #container {
     text-align: center;
     opacity: 0;
     animation: fadeIn 2s forwards;
+    margin-top: 20px;
 }
 
 button {
@@ -43,6 +63,9 @@ button:hover {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .card h2 {
@@ -53,6 +76,14 @@ button:hover {
 .card p {
     margin: 5px 0;
     color: #d1e7ff;
+}
+
+.card .foto-profil {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 10px;
 }
 
 /* Animasi fade-in awal */
