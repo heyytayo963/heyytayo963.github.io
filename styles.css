@@ -1,110 +1,84 @@
-/* Tampilan umum */
+/* Styling umum */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(135deg, #0a1f44, #183e73);
-    color: #fff;
-    overflow: hidden;
+    background-color: #f4f4f4;
 }
 
-/* Slide container */
-.slide {
-    display: none;
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: linear-gradient(135deg, #0a1f44, #183e73);
+header {
     text-align: center;
     padding: 20px;
-    box-sizing: border-box;
+    background-color: #333;
+    color: white;
 }
 
-.slide.active {
-    display: block;
-    animation: fadeIn 1s forwards;
+.logo {
+    width: 100px;
+    height: auto;
 }
 
-/* Header universitas */
-.header {
-    margin-bottom: 20px;
+.content {
+    text-align: center;
+    padding: 50px;
 }
 
-.header .logo {
-    max-height: 60px;
-}
-
-.header h1 {
-    font-size: 24px;
-    color: #fff;
-}
-
-/* Konten di slide 1 */
-.content p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-/* Tombol interaksi */
 button {
     padding: 10px 20px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #004aad;
+    background-color: #007bff;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
 }
 
 button:hover {
-    background-color: #00337a;
-    transform: scale(1.05);
+    background-color: #0056b3;
 }
 
-/* Data diri */
-.card {
-    background-color: rgba(10, 31, 68, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: left;
-    max-width: 400px;
-    margin: 0 auto;
+/* Kontainer slide */
+.slide {
+    display: none;
+    transition: all 0.5s ease;
 }
 
-.card h2 {
-    margin-bottom: 10px;
-    color: #fff;
-}
-
-.card p {
-    margin: 5px 0;
-    color: #d1e7ff;
-}
-
-.card .foto-profil {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+/* Slide aktif */
+.slide.active {
     display: block;
-    margin: 0 auto 10px;
 }
 
-/* Animasi fade-in */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Styling untuk slide kedua */
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.foto-profil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    color: #555;
+}
+
+strong {
+    font-weight: bold;
 }
